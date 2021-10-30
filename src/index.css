@@ -108,6 +108,8 @@ code {
   min-width: 15%;
   border-radius: 5px 5px 5px 5px;
   background-color: lightblue;
+  -webkit-animation: fade-in 1.0s;
+  animation: fade-in 1s;
 }
 
 .profile-card-container {
@@ -125,4 +127,28 @@ code {
 @keyframes movein-right {
 0%   {right: 0%;}
 100% {right: 5%;}
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
