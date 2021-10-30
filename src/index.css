@@ -119,10 +119,10 @@ code {
   min-width: 15%;
   border-radius: 5px 5px 5px 5px;
   background-color: whitesmoke;
-  animation: login 0.8s;
+  animation: movein-right 0.8s;
 }
 
-@keyframes login {
+@keyframes movein-right {
 0%   {right: 0%;}
 100% {right: 5%;}
 }
