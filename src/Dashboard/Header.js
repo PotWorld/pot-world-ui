@@ -8,7 +8,7 @@ import Cart from "./HeaderComponent/Cart";
 class Header extends React.Component {
     render() {
         return(
-            <div class="header flex-horizontal">
+            <div className="header flex-horizontal">
                 <Logo/>
                 <SearchBar/>
                 <Profile/>

@@ -7,7 +7,7 @@ import FourthBodySection from "./BodyComponent/FourthBodySection";
 class Body extends React.Component {
     render() {
         return (
-            <div class="centre-20">
+            <div className="centre-20">
                 <FirstBodySection/> 
                 <SecondBodySection/>
                 <ThirdBodySection/>

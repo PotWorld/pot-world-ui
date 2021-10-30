@@ -13,7 +13,6 @@ code {
 }
 
 .header {
-  z-index: 1;
   background-color: beige;
   min-height: 70px;
   position: fixed;
@@ -98,4 +97,32 @@ code {
 .footer-wrapper {
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.overlay {
+  position: absolute; 
+}
+
+.profile-card {
+  right: 1%;
+  min-width: 15%;
+  border-radius: 5px 5px 5px 5px;
+  background-color: lightblue;
+}
+
+.profile-card-container {
+  padding: 10px
+}
+
+.login-card {
+  right: 5%;
+  min-width: 15%;
+  border-radius: 5px 5px 5px 5px;
+  background-color: whitesmoke;
+  animation: login 0.8s;
+}
+
+@keyframes login {
+0%   {right: 0%;}
+100% {right: 5%;}
 }

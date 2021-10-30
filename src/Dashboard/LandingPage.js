@@ -7,7 +7,7 @@ class LandingPage extends React.Component{
 
     render() {
         return(
-            <div class="main-wrapper">
+            <div className="main-wrapper">
                 <Header/>
                 <Body/>
                 <Footer/>

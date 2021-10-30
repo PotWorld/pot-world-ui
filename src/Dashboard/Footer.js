@@ -4,7 +4,7 @@ class Footer extends React.Component{
 
     render() {
         return(
-            <div class="footer-wrapper">
+            <div className="footer-wrapper">
                 Adding my footer content here
             </div>
         )
