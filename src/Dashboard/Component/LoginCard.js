@@ -15,8 +15,9 @@ class LoginCard extends React.Component {
                     <br/>
                     "show password"
                     <br />
+                    <br />
                     <button className="button">
-                        "click to verify"
+                        "sucessfully logged in..."
                     </button>
                     <br />
                     <br />

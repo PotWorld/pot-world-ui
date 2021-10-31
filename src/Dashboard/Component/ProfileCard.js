@@ -24,6 +24,7 @@ class ProfileCard extends React.Component {
                     <br/>
                     "adding Login"
                     <br />
+                    <br />
                     <button className="button" onClick={this.showLoginCard}>
                         "Login"
                     </button>
