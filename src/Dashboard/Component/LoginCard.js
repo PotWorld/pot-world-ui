@@ -1,6 +1,11 @@
 import React from "react";
+import {enabledLogged} from "../../App";
 
 class LoginCard extends React.Component {
+
+    enabledLogged1() {
+        enabledLogged();
+    }
 
     onClose = () => {
         this.props.closeCard("showLoginCard");
@@ -16,7 +21,7 @@ class LoginCard extends React.Component {
                     "show password"
                     <br />
                     <br />
-                    <button className="button">
+                    <button className="button" onClick={() => this.enabledLogged1()}>
                         "sucessfully logged in..."
                     </button>
                     <br />

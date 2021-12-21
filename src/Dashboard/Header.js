@@ -11,7 +11,7 @@ class Header extends React.Component {
             <div className="header flex-horizontal">
                 <Logo/>
                 <SearchBar/>
-                <Profile/>
+                <Profile enabledLoggedIn={this.props.enabledLoggedIn}/>
                 <Cart/>  
             </div>
         )

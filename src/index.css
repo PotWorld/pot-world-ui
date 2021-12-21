@@ -152,3 +152,31 @@ code {
     opacity: 1;
   }
 }
+
+.navbar {
+  min-width: 20%;
+  display: inline-block;
+}
+
+.navlist {
+  background-color: beige;
+  height: 100vh;
+}
+
+.main-component {
+  display: inline-block;
+}
+
+.nav-child {
+  display: block;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.nav-selected {
+  background-color: lightseagreen;
+}
+
+.nav-link {
+  text-decoration: none;
+}
