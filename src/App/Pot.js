@@ -12,15 +12,15 @@ class Pot extends React.Component {
                 <div className="row">
                     <UserInfo/>
                 </div>
-                <div className="row">
-                <BrowserRouter>
-                    <div className="col navbar">
-                        <Navbar/>
-                    </div>
-                    <div className="col main-component">
-                        <MainComponent/>
-                    </div>
-                </BrowserRouter>    
+                <div className="row flex-container">
+                    <BrowserRouter>
+                        <div className="col navbar">
+                            <Navbar/>
+                        </div>
+                        <div className="col main-component">
+                            <MainComponent/>
+                        </div>
+                    </BrowserRouter>    
                 </div>
             </div>
         )
