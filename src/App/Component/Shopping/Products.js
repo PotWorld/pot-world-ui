@@ -1,78 +1,44 @@
 import React from "react";
+import {connect} from "react-redux";
+import { addToWishlist} from "../.../../../../ActionsCreator/Actions"
 
 class Products extends React.Component {
     render() {
+        const allItems = this.props.items.map((item) => {
+            return  <div className="products" key={item.id}>
+            <div className="">
+                 <img className="images" src="/logo512.png" alt="add the product image" />
+            </div>
+            <div className="flex-container">
+                 <div className="info">
+                     {item.name}
+                 </div>
+                 <div className="wishlist-logo">
+                     <img src="" alt="like logo"/>
+                     {item.info}
+                 </div>
+                </div>
+                <button className="button" onClick={() => this.props.addToWishlist(item.id)}>
+                    "Add to wishlist"
+                </button>
+            </div>
+        })
+
         return (
             <div className="container flex-wrap">
-               <div className="products">
-                   <div className="">
-                        <img className="images" src="/logo512.png" alt="add the product image" />
-                   </div>
-                   <div className="flex-container">
-                        <div className="info">
-                            This is a great product.
-                        </div>
-                        <div className="wishlist-logo">
-                            <img src="" alt="like logo"/>
-                        </div>
-                   </div>
-                </div>
-                <div className="products">
-                   <div className="">
-                        <img className="images" src="/logo512.png" alt="add the product image" />
-                   </div>
-                   <div className="flex-container">
-                        <div className="info">
-                            This is a great product.
-                        </div>
-                        <div className="wishlist-logo">
-                            <img src="" alt="like logo"/>
-                        </div>
-                   </div>
-                </div>
-                <div className="products">
-                   <div className="">
-                        <img className="images" src="/logo512.png" alt="add the product image" />
-                   </div>
-                   <div className="flex-container">
-                        <div className="info">
-                            This is a great product.
-                        </div>
-                        <div className="wishlist-logo">
-                            <img src="" alt="like logo"/>
-                        </div>
-                   </div>
-                </div>
-                <div className="products">
-                   <div className="">
-                        <img className="images" src="/logo512.png" alt="add the product image" />
-                   </div>
-                   <div className="flex-container">
-                        <div className="info">
-                            This is a great product.
-                        </div>
-                        <div className="wishlist-logo">
-                            <img src="" alt="like logo"/>
-                        </div>
-                   </div>
-                </div><div className="products">
-                   <div className="">
-                        <img className="images" src="/logo512.png" alt="add the product image" />
-                   </div>
-                   <div className="flex-container">
-                        <div className="info">
-                            This is a great product.
-                        </div>
-                        <div className="wishlist-logo">
-                            <img src="" alt="like logo"/>
-                        </div>
-                   </div>
-                </div>
-                
+                {allItems}
             </div>
         )
     }
 
 }
 
-export default Products;
+const mapStateToProps = (store) => {
+    return {
+        items: store.allItems || [],
+    }
+}
+
+export default connect(mapStateToProps, {
+    addToWishlist
+})(Products);
