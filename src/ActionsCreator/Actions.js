@@ -11,3 +11,9 @@ export const removeFromWishList = (id) => {
         selectedItemId: id,
     }
 }
+
+export const changePopoverState = (componentName = null) => {
+    return {
+        type: componentName,
+    }
+}

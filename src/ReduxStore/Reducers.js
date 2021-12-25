@@ -1,4 +1,7 @@
 import { combineReducers } from "redux";
+const PopoverComponentState = {
+    EDIT_PROFILE: false,
+};
 
 const shopItems = () => {
     return [
@@ -31,7 +34,21 @@ const wishlistBag = (a=null, action) => {
     return wishlist;
 }
 
+
+const changePopoverComponentState = (a=null, action) => {
+    if(action.type === "OPEN_EDIT_PROFILE") {
+        PopoverComponentState['EDIT_PROFILE'] = true;
+    }
+    if(action.type === "CLOSE_EDIT_PROFILE") {
+        PopoverComponentState['EDIT_PROFILE'] = false;
+    }
+    return PopoverComponentState;
+}
+
+
+
 export default combineReducers({
     allItems: shopItems,
     wishlistBag: wishlistBag,
+    changePopoverState: changePopoverComponentState,
 });
