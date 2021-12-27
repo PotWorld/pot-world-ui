@@ -31,7 +31,7 @@ class App extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className='container-fluid'>
         <Pot />
         {/* {this.state.isLoggedSuccessfull ? <Pot /> : <LandingPage enabledLoggedIn={this.enabledLoggedIn} />} */}
       </div>
@@ -39,7 +39,7 @@ class App extends React.Component{
   }
 }
 
-export default App;
+export default App; 
 export {
   enabledLogged
 }

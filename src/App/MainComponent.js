@@ -9,7 +9,7 @@ class MainComponent extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="container-fluid border g-0"> 
                 <Route path="/" exact component={Home} /> 
                 <Route path="/wishlist" component={WishList} />
                 <Route path="/shop" component={ShoppingCart} />

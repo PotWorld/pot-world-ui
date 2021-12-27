@@ -9,16 +9,16 @@ class Pot extends React.Component {
 
     render(){
         return(
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row main-header">
                     <UserInfo/>
                 </div>
-                <div className="row flex-container">
+                <div className="row">
                     <BrowserRouter>
-                        <div className="col navbar">
+                        <div className="col-md-2">
                             <Navbar/>
                         </div>
-                        <div className="col main-component">
+                        <div className="col-md-10">
                             <MainComponent/>
                         </div>
                     </BrowserRouter>    

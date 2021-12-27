@@ -5,12 +5,16 @@ import Products from "./Shopping/Products";
 class ShoppingCart extends React.Component {
     render() {
         return (
-            <div className="shop-cart">
-               <div className="row">
-                   <Filters />
+            <div className="container-fluid border p-0">
+               <div className="row g-0">
+                   <div className="col">
+                        <Filters />
+                   </div>
+               </div>
+               <div className="row g-0">
                    <Products/>
                </div>
-            </div>
+            </div>  
         )
     }
 
