@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import Reducers from "./ReduxStore/Reducers";
 
