@@ -5,11 +5,11 @@ const PopoverComponentState = {
 
 const shopItems = () => {
     return [
-        {id: 1, name: "this is mango plant", info: "buy as soon as possible"},
-        {id: 2, name: "this is peach planet", info: "we have a lot"},
-        {id: 3, name: "this is money plant", info: "good for bussiness"},
-        {id: 4, name: "this is banana plant", info: "have very long leaves"},
-        {id: 5,name: "this is coconut plant", info: "good for digestion"},
+        {id: 1, name: "bouquet flower", path:"/images/bouquet_flowers_flower.jpg",info: "buy as soon as possible"},
+        {id: 2, name: "cactus green pot", path:"/images/cactus_in_green_pot.jpg", info: "we have a lot"},
+        {id: 3, name: "purple flower", path:"/images/flower_flowers_purple_flowers.jpg", info: "good for bussiness"},
+        {id: 4, name: "sum flower", path:"/images/flower_flowers_sunflower.jpg", info: "have very long leaves"},
+        {id: 5, name: "sun flower", path:"/images/flower_pot.jpg", info: "good for digestion"},
     ]
 }
 

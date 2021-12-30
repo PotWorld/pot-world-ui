@@ -8,16 +8,14 @@ class Products extends React.Component {
             return  (
             <div className="col-md-4 border" key={item.id}>
                 <div className="card border">
-                    <img className="images" src="/logo512.png" alt="add the product image" />
-                    <div className="">
-                    <div className="">
-                        {item.name}
+                    <img className="images card-img-top" src={item.path} alt="add the product image" />
+                    <div className="card-body">
+                        <h5 class="card-title">{item.name}</h5>
+                        <div className="">
+                            <img src="" alt="like logo"/>
+                            {item.info}
+                        </div>
                     </div>
-                    <div className="">
-                        <img src="" alt="like logo"/>
-                        {item.info}
-                    </div>
-                </div>
                 </div>
                 <div className="container-fluid">
                     <div className="row border g-0">

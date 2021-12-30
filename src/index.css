@@ -201,7 +201,7 @@ code {
 
 .images {
   max-width: 200px;
-  max-height: 250px;
+  height: 250px;
   margin-left: 50px;
 }
 
