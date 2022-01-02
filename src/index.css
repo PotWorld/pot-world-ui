@@ -235,4 +235,11 @@ code {
   width: 100%;
   opacity: 5;
   backdrop-filter: blur(2px);
+  left: 0;
+}
+
+.d-abs-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
