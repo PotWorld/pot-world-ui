@@ -1,6 +1,7 @@
 import React from "react";
-import { changePopoverState } from "../ActionsCreator/Actions"
+import { changePopoverState, searchProducts } from "../ActionsCreator/Actions"
 import {connect} from "react-redux";
+import SearchComponent from "./Component/SearchComponent"
 
 class UserInfo extends React.Component {
 
@@ -8,9 +9,14 @@ class UserInfo extends React.Component {
         console.log(this.props)
         return (
             <div className="flex-container">
-                <img className="images pot-logo" src="/POT.png" alt="add the product image" />
-                <div className="edit-profile">
-                <img className="profile" onClick={() => this.props.changePopoverState("OPEN_EDIT_PROFILE")} alt="user profile logo"/>   
+                <div className="col-md-2">
+                    <img className="images pot-logo" src="/POT.png" alt="add the product image" />
+                </div>
+                <div className="col-md-1">
+                    <i class="bi bi-person-circle" style={{fontSize: "3rem", color: "cornflowerblue", cursor: "pointer"}} onClick={() => this.props.changePopoverState("OPEN_EDIT_PROFILE")}></i>
+                </div>
+                <div className="col-md-3 mt-3">
+                    <SearchComponent handleOnchange = {this.props.searchProducts}/>
                 </div>
             </div>
         )
@@ -18,5 +24,6 @@ class UserInfo extends React.Component {
 }
 
 export default connect(null, {
-    changePopoverState
+    changePopoverState,
+    searchProducts,
 })(UserInfo);

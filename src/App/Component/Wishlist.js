@@ -4,28 +4,37 @@ import {removeFromWishList} from "../../ActionsCreator/Actions"
 
 class WishList extends React.Component {
     render() {
-        const whishlistItems = this.props.wishlistBag.map((item) => {
-            return  <div className="products" key={item.id}>
-            <div className="">
-                 <img className="images" src="/logo512.png" alt="add the product image" />
-            </div>
-            <div className="flex-container">
-                 <div className="info">
-                     {item.name}
-                 </div>
-                 <div className="wishlist-logo">
-                     <img src="" alt="like logo"/>
-                     {item.info}
-                 </div>
+        const allItems = this.props.wishlistBag.map((item) => {
+            return  (
+            <div className="col-md-4 border" key={item.id}>
+                <div className="card border">
+                    <img className="images card-img-top" src={item.path} alt="add the product image" />
+                    <div className="card-body">
+                        <h5 class="card-title">{item.name}</h5>
+                        <div className="">
+                            <img src="" alt="like logo"/>
+                            {item.info}
+                        </div>
+                    </div>
                 </div>
-                <button className="button primary" onClick={() => this.props.removeFromWishList(item.id)}>
-                    Remove from wishlist
-                </button>
+                <div className="container-fluid">
+                    <div className="row border g-0">
+                        <div className="col-md-4 d-flex justify-content-end flex-grow-1">
+                            <button className="btn btn-secondary" onClick={() => this.props.removeFromWishList(item.id)}>
+                                "Remove to wishlist"
+                            </button>
+                        </div>   
+                    </div>
+                </div>
             </div>
+            )
         })
+
         return (
-            <div className="container flex-wrap">
-                {whishlistItems.length? whishlistItems: "your wishlist is empty"}
+            <div className="container-fluid border g-0">
+                <div className="row border g-0 gy-3">
+                    {allItems.length? allItems: "Add Item to your wishlist"}
+                </div>
             </div>
         )
     }

@@ -30,10 +30,11 @@ const shopItems = () => {
 }
 
 let wishlist = [
-    {id: 1, name: "this is mango plant", info: "buy as soon as possible"},
-    {id: 2, name: "this is peach planet", info: "we have a lot"},
-    {id: 3, name: "this is money plant", info: "good for bussiness"},
-    {id: 4, name: "this is banana plant", info: "have very long leaves"},
+    {id: 1, name: "bouquet flower", path:"/images/bouquet_flowers_flower.jpg",info: "buy as soon as possible"},
+    {id: 2, name: "cactus green pot", path:"/images/cactus_in_green_pot.jpg", info: "we have a lot"},
+    {id: 3, name: "purple flower", path:"/images/flower_flowers_purple_flowers.jpg", info: "good for bussiness"},
+    {id: 4, name: "sum flower", path:"/images/flower_flowers_sunflower.jpg", info: "have very long leaves"},
+    {id: 5, name: "flower pot", path:"/images/flower_pot.jpg", info: "good for digestion"},
 ];
 
 const wishlistBag = (a=null, action) => {
@@ -50,7 +51,6 @@ const wishlistBag = (a=null, action) => {
     return wishlist;
 }
 
-
 const changePopoverComponentState = (a=null, action) => {
     if(action.type === "OPEN_EDIT_PROFILE") {
         PopoverComponentState['EDIT_PROFILE'] = true;
@@ -61,10 +61,16 @@ const changePopoverComponentState = (a=null, action) => {
     return PopoverComponentState;
 }
 
-
+const getAllShopItems = ( newShopList = null, action) => {
+    if (action.type === "SEARCH_PRODUCT" && action.searchInput) {
+        return shopItems().filter((item) => item.name.includes(action.searchInput)); 
+    }
+    return newShopList || shopItems();
+}
 
 export default combineReducers({
-    allItems: shopItems,
+    allItems: getAllShopItems,
     wishlistBag: wishlistBag,
     changePopoverState: changePopoverComponentState,
+    searchProducts: getAllShopItems,
 });

@@ -17,3 +17,10 @@ export const changePopoverState = (componentName = null) => {
         type: componentName,
     }
 }
+
+export const searchProducts = (searchInput) => {
+    return {
+        type: "SEARCH_PRODUCT",
+        searchInput,
+    }
+}

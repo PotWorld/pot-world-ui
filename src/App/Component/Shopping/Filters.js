@@ -19,7 +19,7 @@ class Filters extends React.Component {
                     <div className="col d-flex justify-content-end mx-2">
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" onClick={() => this.toggleDropDown()} data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-filter-square" style={{fontSize: "2rem", color: "cornflowerblue"}}></i>
+                            <i class="bi bi-filter-square" style={{fontSize: "2rem", color: "cornflowerblue", cursor: "pointer"}}></i>
                         </button>
                         <ul class="dropdown-menu flex-column" style={ this.state.showFilters? {display: "flex"}: {display: "none"}} aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" onClick={() => this.toggleDropDown()}  href="#">Action</a></li>

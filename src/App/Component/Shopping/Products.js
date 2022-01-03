@@ -4,7 +4,7 @@ import { addToWishlist} from "../.../../../../ActionsCreator/Actions"
 
 class Products extends React.Component {
     render() {
-        const allItems = this.props.items.map((item) => {
+        const allItems = this.props.items && this.props.items.map((item) => {
             return  (
             <div className="col-md-4 border" key={item.id}>
                 <div className="card border">
@@ -33,7 +33,7 @@ class Products extends React.Component {
         return (
             <div className="container-fluid border g-0">
                 <div className="row border g-0 gy-3">
-                    {allItems}
+                    {allItems.length ? allItems : "No Products Found"}
                 </div>
             </div>
         )
